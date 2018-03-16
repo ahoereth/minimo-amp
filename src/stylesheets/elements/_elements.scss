@@ -24,9 +24,19 @@ q {
 
 hr {
   border: 0;
-  height: 1px;
-  margin: 2em 0;
-  background-color: $color__background-hr;
+  height: 0.12em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: $color__accent;  // $color__background-hr;
+  max-width: 4em;
+
+  #content & {
+    margin-left: 0;
+  }
+
+  .sidebar & {
+    margin-right: 0;
+  }
 }
 
 img {
