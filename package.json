@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "start":
-      "hugo server --source=exampleSite --themesDir=../.. --disableFastRender",
+    "start": "hugo server --source=exampleSite --themesDir=../.. --disableFastRender",
     "watch": "webpack --watch --progress --colors"
   },
   "devDependencies": {
@@ -33,9 +32,7 @@
     "webpack-cli": "^2.0.9"
   },
   "dependencies": {
-    "es6-docready": "^1.0.0",
-    "hamburgers": "^0.9.3",
     "normalize.css": "7.0.0",
-    "twemoji": "^2.5.0"
+    "npm": "^5.7.1"
   }
 }

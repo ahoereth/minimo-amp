@@ -6,7 +6,7 @@
   width: 100%;
   padding-top: 2em;
 
-  transition: margin-left $transition-duration;
+  // transition: margin-left $transition-duration;  // not supported by AMP
 
   .sidebar-toggled & {
     margin-left: $sidebar__width;

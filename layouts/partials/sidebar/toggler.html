@@ -2,11 +2,6 @@
 
 <a class='screen-reader-text' href='#content'>{{ i18n "skipToContent" }}</a>
 
-<button id='sidebar-toggler' class='hamburger hamburger--arrow sidebar-toggler' type='button' aria-controls='sidebar' aria-expanded='false'>
-  <span class='screen-reader-text'>{{ i18n "toggleSidebar" }}</span>
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
+<div class='sidebar-toggler' role="button" on="tap:amp-sidebar.toggle" tabindex="0">☰</div>
 
 {{- end -}}

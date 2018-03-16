@@ -8,7 +8,7 @@
   padding: 0;
   border: 0;
   overflow: hidden;
-  word-wrap: normal !important;
+  word-wrap: normal;  // !important;  // not supported by AMP
 
   &:focus {
     display: block;

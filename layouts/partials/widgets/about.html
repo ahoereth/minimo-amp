@@ -2,17 +2,20 @@
 {{- $configData := ( or .Site.Data.config.widgets.about $defaultConfig ) -}}
 {{- $lang := .Site.Language.Lang -}}
 {{- $config := ( ( index $configData $lang ) | default $configData ) -}}
-
 <section class='widget widget-about sep-after'>
   <header>
-    {{ with $config.logo }}
-    <div class='logo'>
-      <a href='{{ $.Site.BaseURL | relURL }}'>
-        <img src='{{ . | relURL }}'>
-      </a>
-    </div>
+    {{ with .Site.GetPage "home" }}
+      {{ with .Resources.GetMatch "logo*" }}
+      <div class='logo'>
+        <a href='{{ $.Site.BaseURL | relURL }}'>
+          <amp-img src='{{ .RelPermalink }}'
+                   width="{{ .Width }}" height="{{ .Height }}"
+                   layout='responsive' alt='{{ .Title }}'></amp-img>
+        </a>
+      </div>
+      {{ end }}
     {{ end }}
-    <h2 class='title site-title '>
+    <h2 class='title site-title'>
     {{ with $config.title }}
       {{- . -}}
     {{ else }}

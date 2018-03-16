@@ -17,7 +17,7 @@ summary {
       content: '\25BC';
       display: inline-block;
       margin-right: 0.25em;
-      transition: 0.1s;
+      // transition: 0.1s;  // not supported by AMP
       transform: rotate(-90deg);
     }
 

@@ -20,7 +20,7 @@ input[type='submit'] {
   user-select: none;
   cursor: pointer;
 
-  transition: 0.1s ease-in-out;
+  // transition: 0.1s ease-in-out;  // not supported by AMP
 
   &:focus {
     outline-color: $color__accent;

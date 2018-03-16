@@ -1,31 +1,27 @@
 .sidebar {
-  position: absolute;
-  left: -$sidebar__width;
-
   width: $sidebar__width;
   max-width: 100%;
   padding: 2em 0;
 
-  z-index: 99999;
-  transition: left $transition-duration;
-
+  background-color: #fff;
   text-align: right;
+
+  .sep-after {
+    &:after {
+      margin-left: auto;
+    }
+  }
+}
+
+.site > .sidebar {
+  position: absolute;
+  left: -$sidebar__width;
 
   .sidebar-sticky & {
     position: fixed;
     overflow-y: auto;
     top: 0;
     bottom: 0;
-  }
-
-  .sidebar-toggled & {
-    left: 0;
-  }
-
-  .sep-after {
-    &:after {
-      margin-left: auto;
-    }
   }
 
   @include screen($breakpoint-medium) {
@@ -35,30 +31,24 @@
 
 .sidebar-toggler {
   background: transparent;
-
-  &:focus,
-  &:hover,
-  &:active {
-    background: transparent;
-  }
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
 
   .main-menu & {
-    margin-right: 0.75em;
-    padding: 0;
+    margin-right: 20px;
+    @include screen($breakpoint-medium) {
+      display: none;
+    }
   }
 
   .sidebar & {
     position: absolute;
-    top: 0.5em;
-    left: 0.5em;
-
-    z-index: 99999;
-  }
-
-  @include screen($breakpoint-medium) {
-    display: none;
+    left: 20px;
   }
 }
+
+/*
 
 .sidebar-overlay {
   display: none;
@@ -85,3 +75,5 @@
     }
   }
 }
+
+*/

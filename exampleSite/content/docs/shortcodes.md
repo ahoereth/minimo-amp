@@ -82,7 +82,7 @@ Include content from seperate file with syntax highlighting.
 
 ### file: Parameters
 
-0 => filename [`String`] \(required\)  
+0 => filename [`String`] \(required\)
 1 => filetype [`String`] \(optional\)
 
 ### file: Usage Example
@@ -94,39 +94,3 @@ Include content from seperate file with syntax highlighting.
 **Output**
 
 {{< file "content/_index.md" >}}
-
----
-
-## Shortcode: text
-
-Text with custom size and color
-
-### text: Parameters
-
-You can use either Named or Unnamed Parameters
-
-**Named Parameters**
-
-- `s` or `size`  [`String`] \(optional\): multiplier relative to the normal size
-- `c` or `color` [`String`] \(optional\): name / hex / rgb / rgba
-
-**Unnamed Parameters**
-
-0 => textsize [`String`] \(required\): multiplier relative to the normal size  
-1 => textcolor [`String`] \(optional\): name / hex / rgb / rgba
-
-### text: Usage Example
-
-```golang
-{{%/* text s="1.4" color="purple" */%}}
-font-size: 1.4em;
-color: purple;
-{{%/* /text */%}}
-```
-
-**Output**
-
-{{% text s="1.4" color="purple" %}}
-font-size: 1.5em;  
-color: purple;
-{{% /text %}}

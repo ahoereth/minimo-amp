@@ -1,8 +1,13 @@
 <link rel='icon' href='{{ ( or .Site.Params.assets.favicon "favicon.ico" ) | relURL }}'>
-<link rel='stylesheet' href='{{ print "/assets/css/" .Site.Data.assets.main.css | relURL  }}'>
 
+<style amp-custom>
+{{ print (partial (print "assets/" .Site.Data.assets.main.css) .) | safeCSS }}
 {{- range .Site.Params.assets.customCSS -}}
-  <link rel='stylesheet' href='{{ . | relURL }}'>
+{{- if (fileExists "static/img/banner.jpg") -}}
+  {{- print (partial . .) | safeCSS -}}
 {{- end -}}
+{{- end -}}
+</style>
+
 
 {{- partial "head/analytics" . -}}

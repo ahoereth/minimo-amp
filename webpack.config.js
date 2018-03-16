@@ -21,12 +21,11 @@ const assetsManifest = new AssetsWebpackPlugin({
 
 const extractCSS = new ExtractTextWebpackPlugin({
   filename: getPath =>
-    getPath('css/[name].[contenthash:8].css').replace('css', '../css')
+    getPath('[name].[contenthash:8].css')
 })
 
 const cleanBuild = new CleanWebpackPlugin([
-  'static/assets/css/*',
-  'static/assets/js/*'
+  'layouts/partials/assets/*',
 ])
 
 const node_env = process.env.NODE_ENV
@@ -39,7 +38,7 @@ const config = {
   output: {
     filename: '[name].[chunkhash:8].js',
     chunkFilename: '[name].[chunkhash:8].js',
-    path: path.join(__dirname, 'static', 'assets/js')
+    path: path.join(__dirname, 'layouts', 'partials', 'assets')
   },
   module: {
     rules: [

@@ -31,38 +31,38 @@ Here are the configuration options available for the Widgets:
 #### Widget: About
 
 - `about` [`Map`]:
-  - `title` [`String`]: Title  
+  - `title` [`String`]: Title
      _default: `.Site.Title`_
-  - `description` [`String`]: Description  
+  - `description` [`String`]: Description
     _default: `.Site.Params.info.description`_
-  - `logo` [`String`]: path/url of Logo  
-    _default: `"/images/logo.png"`_
+  - `logo` [`String`]: path/url of Logo
+    _default: `"logo.png"`_
 
 #### Widget: Recent Posts
 
 - `recent_posts` [`Map`]:
-  - `title` [`String`]: Title  
+  - `title` [`String`]: Title
     _default: `"Recent Posts"`_
-  - `length` [`Integer`]: Number of posts to show  
+  - `length` [`Integer`]: Number of posts to show
     _default: `5`_
-  - `excludeTypes` [`Array` of `String`s]:  Types of posts to exclude  
+  - `excludeTypes` [`Array` of `String`s]:  Types of posts to exclude
     _default: `["page"]`_
 
 #### Widget: Social Menu
 
 - `social_menu` [`Map`]:
-  - `title` [`String`]: Title  
+  - `title` [`String`]: Title
     _default: `""`_
   - `platforms` [`Array` of `String`s]: Social platform to show
 
 #### Widget: Taxonomy Cloud
 
 - `taxonomy_cloud` [`Map`]:
-  - `title` [`String`]: Title  
+  - `title` [`String`]: Title
     _default: Plural Name for `taxonomyCloud.taxonomy`_
-  - `taxonomy` [`String`]: Taxonomy to show  
+  - `taxonomy` [`String`]: Taxonomy to show
     _default: `.Site.Params.info.description`_
-  - `shuffle` [`Boolean`]: Shuffle Taxonomy Terms  
+  - `shuffle` [`Boolean`]: Shuffle Taxonomy Terms
     _default: `true`_
 
 ## Available Widget Areas

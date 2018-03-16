@@ -6,7 +6,7 @@ textarea {
   border: 1px solid $color__border-input;
   border-radius: 0.2em;
   color: $color__text-input;
-  transition: 0.1s ease-in-out;
+  // transition: 0.1s ease-in-out;  // not supported by AMP
 
   &:focus {
     border-color: $color__border-input-focus;
