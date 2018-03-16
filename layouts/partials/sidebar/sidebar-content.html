@@ -1,0 +1,7 @@
+{{- range .Site.Params.widgets.sidebar -}}
+  {{- partial ( print "widgets/" . ) $ -}}
+{{- end -}}
+
+{{ with .Site.GetPage "page" "sidebar" }}
+  {{ .Content }}
+{{ end }}

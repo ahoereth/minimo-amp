@@ -4,9 +4,7 @@
 
 <div class='sidebar'>
   <div class='container'>
-  {{- range .Site.Params.widgets.sidebar -}}
-    {{- partial ( print "widgets/" . ) $ -}}
-  {{- end -}}
+  {{- partial "sidebar/sidebar-content" -}}
   </div>
 </div>
 

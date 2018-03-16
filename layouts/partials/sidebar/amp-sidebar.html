@@ -2,8 +2,6 @@
 <amp-sidebar id='amp-sidebar' class='sidebar' layout='nodisplay' side='left'>
   <div class='sidebar-toggler' role="button" on="tap:amp-sidebar.toggle" tabindex="0">x</div>
   <div class='container'>
-  {{- range .Site.Params.widgets.sidebar -}}
-    {{- partial ( print "widgets/" . ) $ -}}
-  {{- end -}}
+  {{- partial "sidebar/sidebar-content" -}}
   </div>
 </amp-sidebar>
