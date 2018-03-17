@@ -1,4 +1,6 @@
-<link rel='icon' href='{{ ( or .Site.Params.assets.favicon "favicon.ico" ) | relURL }}'>
+{{ with .Site.Params.assets.favicon }}
+  <link rel='icon' href='{{ . | relURL }}'>
+{{ end }}
 
 <style amp-custom>
 {{ print (partial (print "assets/" .Site.Data.assets.main.css) .) | safeCSS }}
