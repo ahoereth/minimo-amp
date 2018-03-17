@@ -1,0 +1,13 @@
+.entry-content amp-accordion section :first-child {
+  background-color: transparent;
+  border: none;
+  padding-top: 1.5em;
+}
+
+amp-accordion section[expanded] .show-more {
+  display: none;
+}
+
+amp-accordion section:not([expanded]) .show-less {
+  display: none;
+}

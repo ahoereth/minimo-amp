@@ -1,0 +1,10 @@
+<amp-accordion disable-session-states>
+  <section>
+    <h3>
+      {{ .Get 0 }}
+      <span class="show-more">▹</span>
+      <span class="show-less">▿</span>
+    </h3>
+    <div>{{ .Inner | markdownify }}</div>
+  </section>
+</amp-accordion>
