@@ -11,6 +11,23 @@
   </div>
 
   {{ partial "sidebar/amp-sidebar" . }}
+  {{- with .Site.Params.info.google_analytics -}}
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+      {
+        "vars": {
+          "account": "{{ . }}"
+        },
+        "triggers": {
+          "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+          }
+        }
+      }
+    </script>
+  </amp-analytics>
+  {{- end -}}
 
 </body>
 

@@ -1,0 +1,21 @@
+{{ $q := .Get "q" }}
+{{ $key := .Get "key" }}
+{{ $zoom := .Get "zoom" }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+
+<amp-iframe
+  width="{{ $width }}"
+  height="{{ $height }}"
+  layout="responsive"
+  sandbox="allow-scripts allow-same-origin allow-popups"
+  frameborder="0"
+  src="https://www.google.com/maps/embed/v1/place?key={{ $key }}&q={{ $q }}&zoom={{ $zoom }}">
+  <amp-img
+    src="https://maps.googleapis.com/maps/api/staticmap?key={{ $key }}&center={{ $q }}&zoom={{ $zoom }}&size={{ $width }}x{{ $height }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    layout="responsive"
+    placeholder>
+  </amp-img>
+</amp-iframe>
