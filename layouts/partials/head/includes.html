@@ -4,11 +4,6 @@
 
 <style amp-custom>
 {{ print (partial (print "assets/" .Site.Data.assets.main.css) .) | safeCSS }}
-{{- range .Site.Params.assets.customCSS -}}
-{{- if (fileExists "static/img/banner.jpg") -}}
-  {{- print (partial . .) | safeCSS -}}
-{{- end -}}
-{{- end -}}
 </style>
 
 

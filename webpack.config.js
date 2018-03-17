@@ -21,7 +21,7 @@ const assetsManifest = new AssetsWebpackPlugin({
 
 const extractCSS = new ExtractTextWebpackPlugin({
   filename: getPath =>
-    getPath('[name].[contenthash:8].css')
+    getPath('[name].css')
 })
 
 const cleanBuild = new CleanWebpackPlugin([
@@ -36,8 +36,8 @@ const config = {
     main: path.join(__dirname, 'src/scripts', 'main.js')
   },
   output: {
-    filename: '[name].[chunkhash:8].js',
-    chunkFilename: '[name].[chunkhash:8].js',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
     path: path.join(__dirname, 'layouts', 'partials', 'assets')
   },
   module: {
