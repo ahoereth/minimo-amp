@@ -1,3 +1,9 @@
+.sep-before {
+  &:before {
+    border-bottom-color: $color__accent;
+  }
+}
+
 .footer {
   .sep-before {
     &:before {
