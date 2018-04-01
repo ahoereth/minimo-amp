@@ -1,15 +1,13 @@
-{{ $original := .Page.Resources.GetMatch (printf "**%s*" (.Get 0)) }}
-{{ $width := (replace (default $original.Width (.Get 1)) "px" "") }}
-{{ .Scratch.Set "x1" ($original.Resize (print $width "x q85")) }}
-{{ .Scratch.Set "x2" ($original.Resize (print (mul (int $width) 2) "x q85")) }}
-{{ $x1 := .Scratch.Get "x1" }}
-{{ $x2 := .Scratch.Get "x2" }}
+{{ $img := .Page.Resources.GetMatch (printf "**%s*" (.Get 0)) }}
+{{ $width := (replace (default $img.Width (.Get 1)) "px" "") }}
+{{ $x1 := $img.Resize (print $width "x q85") }}
+{{ $x2 := $img.Resize (print (mul (int $width) 2) "x q85") }}
 <div class="image">
 	<amp-img
 		src="{{ $x1.RelPermalink }}"
 		srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x"
 		width="{{ $x1.Width }}"
-		height="{{ $x1.Height }}">
+		height="{{ $x1.Height }}"
+		layout="intrinsic">
 	</amp-img>
-	<!-- Currently not yet available but desired: layout="intrinsic" -->
 </div>
