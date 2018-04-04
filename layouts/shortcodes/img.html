@@ -1,5 +1,15 @@
-{{ $img := .Page.Resources.GetMatch (printf "**%s*" (.Get 0)) }}
-{{ $width := (replace (default $img.Width (.Get 1)) "px" "") }}
+{{ $.Scratch.Add "page" .Page }}
+{{ $pagearg := .Get "page" }}
+{{ if $pagearg  }}
+	{{ $.Scratch.Set "page" (.Site.GetPage "page" $pagearg) }}
+	{{ if (not ($.Scratch.Get "page")) }}
+		{{ $.Scratch.Set "page" (.Site.GetPage "section" $pagearg) }}
+	{{ end }}
+{{ end }}
+
+{{ $page := $.Scratch.Get "page" }}
+{{ $img := $page.Resources.GetMatch (printf "**%s*" (.Get "name")) }}
+{{ $width := (replace (default $img.Width (.Get "width")) "px" "") }}
 {{ $x1 := $img.Resize (print $width "x q85") }}
 {{ $x2 := $img.Resize (print (mul (int $width) 2) "x q85") }}
 <div class="image">

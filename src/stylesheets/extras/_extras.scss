@@ -1,3 +1,27 @@
 @import 'variables/variables';
 
 @import 'mixins/mixins';
+
+.columns + p {
+  clear: both;
+}
+
+.columns + p:empty {
+  font-size: 1px;
+  height: 1px;
+  margin: 0;
+}
+
+.float-left {
+  padding-right: 2em;
+  float: left;
+}
+
+
+.mobile-only {
+  display: block;
+
+  @include screen($breakpoint-medium) {
+    display: none;
+  }
+}
