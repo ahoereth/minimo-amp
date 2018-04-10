@@ -18,10 +18,14 @@
 }
 
 
-.mobile-only {
+.entry-content .mobile-only {
   display: block;
 
   @include screen($breakpoint-medium) {
     display: none;
+  }
+
+  & + h2 {
+    margin-top: 0;
   }
 }
