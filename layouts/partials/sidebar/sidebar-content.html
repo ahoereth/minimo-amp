@@ -1,7 +1,3 @@
-{{- range .Site.Params.widgets.sidebar -}}
-  {{- partial ( print "widgets/" . ) $ -}}
-{{- end -}}
-
-{{ with .Site.GetPage "page" "sidebar" }}
-  {{ .Content }}
-{{ end }}
+{{- range .Site.Params.widgets.sidebar -}} {{- partial ( print "widgets/" . ) $
+-}} {{- end -}} {{ with .Site.GetPage "page" "sidebar" }} {{ .Content }} {{ end
+}} {{ partial "sidebar/language-switcher" . }}

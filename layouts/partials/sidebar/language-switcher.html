@@ -1,0 +1,13 @@
+{{ if hugo.IsMultilingual }}
+<div class="sidebar-language-switcher">
+  {{ if eq .Language.Lang "de" }}
+  <span class="current-language"><strong>Deutsch</strong></span>
+  <span class="separator">|</span>
+  <a href="/es/" class="language-link">Español</a>
+  {{ else }}
+  <a href="/" class="language-link">Deutsch</a>
+  <span class="separator">|</span>
+  <span class="current-language"><strong>Español</strong></span>
+  {{ end }}
+</div>
+{{ end }}

@@ -38,6 +38,33 @@
       border-bottom: none;
     }
   }
+
+  .sidebar-language-switcher {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 0.9em;
+
+    .current-language {
+      color: $color__accent;
+    }
+
+    .separator {
+      margin: 0 0.5em;
+      color: $color__grey;
+    }
+
+    .language-link {
+      color: $color__text;
+      text-decoration: none;
+      border-bottom: none;
+
+      &:hover {
+        color: $color__accent;
+      }
+    }
+  }
 }
 
 .site > .sidebar {
